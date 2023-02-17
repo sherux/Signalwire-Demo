@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VIDEOCALL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Import Axios library (You can use the Fetch API if you like) -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Import SignalWire library -->
+    <script src="https://unpkg.com/@signalwire/js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+    <!-- Montserrat Font to make it look good -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>async function localStoragedata(){
+        const spaceurl=document.getElementById("spaceurl")
+        const projectid=document.getElementById("projectid")
+
+        const projecttoken=document.getElementById("projecttoken")
+
+     await  localStorage.setItem("spaceurl",spaceurl.value)
+     await localStorage.setItem("projectid",projectid.value)
+     await localStorage.setItem("projecttoken",projecttoken.value)
+
+
+
+    }</script>
+    
+  </head>
+
+  <body>
+    <div class="header">
+      <div>DEMO</div>
+    </div>
+
+    <div class="wrapper">
+      <div class="content">
+        <!-- <div id="loading" class="dynamic">Loading ...</div> -->
+
+        <div id="login" class="dynamic">
+          <h1 class="dynamic-box-title">Login</h1>
+
+            <form action="/video" method="get">
+              <div class="form-input">
+                <input
+                  type="text"
+                  id="spaceurl"
+                  placeholder="Space Url"
+                  required
+                  class="input-box"
+                  minlength="1"
+                  maxlength="30"
+                  pattern="[^' ']+"
+                />
+              </div>
+              <div class="form-input">
+                <input
+                  type="text"
+                  id="projectid"
+                  placeholder="Project Id"
+                  minlength="1"
+                  class="input-box"
+                  maxlength="80"
+                  pattern="[^' ']+"
+                />
+              </div>
+              <div class="form-input">
+                <input
+                  type="text"
+                  id="projecttoken"
+                  class="input-box"
+                  placeholder="Project Token"
+                  minlength="1"
+                  maxlength="80"
+                  pattern="[^' ']+"
+                />
+              </div>
+              <div class="form-input">
+                <button type="submit" class="btn input-btn" onclick="localStoragedata()">Login</button>
+              </div>
+          </form>
+        
+
+        </div>
+        
+    </body>
+</html>
