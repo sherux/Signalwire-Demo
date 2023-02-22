@@ -1,7 +1,4 @@
-// c0888c1a-816a-4741-9088-428a25d440cf
 const { Video } = require("@signalwire/realtime-api");
-
-const apiurl = `https://jerris.signalwire.com/api/video`;
 
 // Basic express boilerplate
 const express = require("express");
@@ -26,6 +23,7 @@ app.post("/get_token", cors(), async (req, res) => {
   console.log("====================================", req.body);
   console.log("get token");
   let {
+    spaceurl,
     user_name,
     room_name,
     join_from,
@@ -47,8 +45,9 @@ app.post("/get_token", cors(), async (req, res) => {
   try {
     console.log(req.body);
     let token = await axios.post(
-      apiurl + "/room_tokens",
+      `https://${spaceurl}/api/video` + "/room_tokens",
       {
+        spaceurl: spaceurl,
         user_name: user_name,
         room_name: room_name,
         join_from,
@@ -75,6 +74,7 @@ app.post("/get_token", cors(), async (req, res) => {
       },
       {
         auth: {
+          spaceurl: req.body.spaceurl,
           username: req.body.projectid,
           password: req.body.projecttoken,
         },
