@@ -24,22 +24,22 @@ body {
     height: calc(100vh - 67px);
     background-color: var(--bg-color);
   }
-  .dynamic{
-    width: 350px;
-    margin: auto;
-    padding: 30px;
-    text-align: center;
-    border-width: var(--border-width) ;
-    border-style: var(--border-style);
-    border-image: var(--gradient);
-  }
-  .dynamic-box-title {
-    margin-top: 0;
-    margin-bottom: 30px;
-    /* -webkit-text-stroke: 0.12rem var(--dark-fonts-color); */
-    color: var(--primary-color);
-    letter-spacing: 1.5px;
-  }
+    .dynamic{
+      width: 350px;
+      margin: auto;
+      padding: 30px;
+      text-align: center;
+      border-width: var(--border-width) ;
+      border-style: var(--border-style);
+      border-image: var(--gradient);
+    }
+    .dynamic-box-title {
+      margin-top: 0;
+      margin-bottom: 30px;
+      /* -webkit-text-stroke: 0.12rem var(--dark-fonts-color); */
+      color: var(--primary-color);
+      letter-spacing: 1.5px;
+    }
   .form-input {
     width: 100%;
     margin-bottom: 20px;
@@ -52,6 +52,7 @@ body {
     padding: 5px 10px;
     width: -webkit-fill-available;
     background: transparent;
+    
   }
   .form-input .input-btn{
     width: 100%;

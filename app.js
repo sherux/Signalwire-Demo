@@ -1,7 +1,7 @@
 // c0888c1a-816a-4741-9088-428a25d440cf
 const { Video } = require("@signalwire/realtime-api");
 
-const apiurl = `https://khushal.signalwire.com/api/video`;
+const apiurl = `https://jerris.signalwire.com/api/video`;
 
 // Basic express boilerplate
 const express = require("express");
@@ -23,7 +23,7 @@ const auth = {
 };
 
 app.post("/get_token", cors(), async (req, res) => {
-  console.log(req.body);
+  console.log("====================================", req.body);
   console.log("get token");
   let {
     user_name,
@@ -71,12 +71,6 @@ app.post("/get_token", cors(), async (req, res) => {
           "room.self.audio_unmute",
           "room.self.video_mute",
           "room.self.video_unmute",
-          "room.recording",
-          "room.self.deaf",
-          "room.self.undeaf",
-          "room.self.set_input_volume",
-          "room.self.set_output_volume",
-          "room.self.set_input_sensitivity",
         ],
       },
       {
