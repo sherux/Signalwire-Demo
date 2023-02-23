@@ -7,6 +7,6 @@ const control = require("../controller/room.controller");
 
 route.get("/login", cors(), control.login);
 route.get("/join", cors(), control.join);
-route.get("/video", cors(), control.video2);
+route.get("/video", cors(), control.video);
 
 module.exports = route;
