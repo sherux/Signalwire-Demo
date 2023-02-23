@@ -14,13 +14,14 @@ const videorroutes = require("./routes/video.routes");
 const roomroutes = require("./routes/room.routes");
 app.use("/", roomroutes);
 app.use("/video", videorroutes);
+
 const auth = {
   username: process.env.project, // Project-ID
   password: process.env.token, // API token
 };
 
 app.post("/get_token", cors(), async (req, res) => {
-  console.log("====================================", req.body);
+  console.log("====================================>", req.body);
   console.log("get token");
   let {
     spaceurl,

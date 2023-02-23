@@ -1,7 +1,5 @@
 const { Video } = require("@signalwire/realtime-api");
 
-const apiurl = `https://jerris.signalwire.com/api/video`;
-
 // Basic express boilerplate
 
 const express = require("express");
@@ -12,10 +10,7 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-const auth = {
-  username: process.env.project, // Project-ID
-  password: process.env.token, // API token
-};
+
 // End basic express boilerplate
 const video = new Video.Client({
   project: process.env.project,
