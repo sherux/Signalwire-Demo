@@ -44,7 +44,7 @@ const join = async (req, res) => {
     console.log(error.message);
   }
 };
-const video2 = async (req, res) => {
+const video = async (req, res) => {
   try {
     await res.render("video");
   } catch (error) {
@@ -54,5 +54,5 @@ const video2 = async (req, res) => {
 module.exports = {
   login,
   join,
-  video2,
+  video,
 };
